@@ -17,8 +17,13 @@ namespace WebApiSvc.Migrations
 
         protected override void Seed(WebApiSvc.Areas.TrainingCatalog.Models.DbTrainingContext context)
         {
+           
+
+
+
+
             ////----------------Course/Template
-            //var course1 = new Course { Name = "First Course", Notes = "FC Note", Templates = new List<Template>()};
+            //var course1 = new Course { Name = "First Course", Notes = "FC Note", Templates = new List<Template>() };
             //var course2 = new Course { Name = "Second Course", Notes = "Sec Note", Templates = new List<Template>() };
             //var template1 = new Template { Name = "Template1" };
             //var template2 = new Template { Name = "Template2" };

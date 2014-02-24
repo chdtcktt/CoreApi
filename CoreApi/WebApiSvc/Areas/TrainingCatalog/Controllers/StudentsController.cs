@@ -30,8 +30,8 @@ namespace WebApiSvc.Areas.TrainingCatalog.Controllers
         {
             var vm = new List<StudentListViewModel>
                 {
-                    new StudentListViewModel {StudentId = 1, Name = "Jojo", CoursesCompleted = 3, TotalCourses = 6},
-                    new StudentListViewModel {StudentId = 2, Name = "ChadMand", CoursesCompleted = 8, TotalCourses = 10}
+                    new StudentListViewModel {StudentId = 1, Name = "Jimmy McJimmers", CoursesCompleted = 3, TotalCourses = 6},
+                    new StudentListViewModel {StudentId = 2, Name = "Rickey McRickerton", CoursesCompleted = 8, TotalCourses = 10}
                 };
 
 
