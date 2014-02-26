@@ -17,7 +17,7 @@ using WebApiSvc.ViewModels.Admin.EditUser;
 namespace WebApiSvc.Areas.TrainingCatalog.Controllers
 {
     [AllowCrossSiteJsonAttribute]
-    [EnableCors(origins: "http://localhost:41029", headers: "*", methods: "*")]
+    [EnableCors(origins: "http://localhost:22562", headers: "*", methods: "*")]
     public class AdminController : ApiController
     {
         #region Get EditUser
