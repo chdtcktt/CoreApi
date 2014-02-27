@@ -17,7 +17,7 @@ using WebApiSvc.ViewModels.Admin.EditUser;
 namespace WebApiSvc.Areas.TrainingCatalog.Controllers
 {
     [AllowCrossSiteJsonAttribute]
-    [EnableCors(origins: "http://localhost:22562", headers: "*", methods: "*")]
+    [EnableCors(origins: "http://thatcodeguy.net/", headers: "*", methods: "*")]
     public class AdminController : ApiController
     {
         #region Get EditUser
@@ -30,12 +30,17 @@ namespace WebApiSvc.Areas.TrainingCatalog.Controllers
                     new GetPersonNamesViewModel
                         {
                             PersonId = 1,
-                            PersonName = "Chad"
+                            PersonName = "Jimmy McJimmers"
                         },
                     new GetPersonNamesViewModel
                         {
                             PersonId = 2,
-                            PersonName = "Mike"
+                            PersonName = "Rickey McRickerton"
+                        },
+                        new GetPersonNamesViewModel
+                        {
+                            PersonId = 3,
+                            PersonName = "Jilly JoJohnson"
                         }
 
                 };
@@ -48,87 +53,112 @@ namespace WebApiSvc.Areas.TrainingCatalog.Controllers
             if (id == 1)
             {
                 var vm = new GetPersonAttributesViewModel
-                    {
-                        IsActive = true,
-                        Courses = new List<_PersonAttributesCourses>
+                {
+                    IsActive = true,
+                    Courses = new List<_PersonAttributesCourses>
                             {
                                 new _PersonAttributesCourses
                                     {
+                                        CourseName="Linux Kernal",
                                         CourseId = 1,
-                                        CourseName = "Math",
                                         IsTaking = true,
                                         IsTeaching = false
                                     },
                                 new _PersonAttributesCourses
                                     {
+                                        CourseName="Objective C",
                                         CourseId = 2,
-                                        CourseName = "Science",
                                         IsTaking = false,
                                         IsTeaching = true
                                     },
                                 new _PersonAttributesCourses
                                     {
+                                        CourseName="Social Networking",
                                         CourseId = 3,
-                                        CourseName = "English",
                                         IsTeaching = true,
                                         IsTaking = false
                                     },
-                                new _PersonAttributesCourses
-                                    {
-                                        CourseId = 4,
-                                        CourseName = "PE",
-                                        IsTaking = true,
-                                        IsTeaching = true
-                                    }
+                            
                             }
 
-                    };
-
+                };
                 return vm;
             }
 
-            else
+            if (id == 2)
             {
                 var vm = new GetPersonAttributesViewModel
-                    {
-                        IsActive = true,
-                        Courses = new List<_PersonAttributesCourses>
+                {
+                    IsActive = true,
+                    Courses = new List<_PersonAttributesCourses>
                             {
                                 new _PersonAttributesCourses
                                     {
+                                        CourseName="Mopping",
                                         CourseId = 1,
-                                        CourseName = "Math",
-                                        IsTaking = false,
+                                        IsTaking = true,
                                         IsTeaching = true
                                     },
                                 new _PersonAttributesCourses
                                     {
+                                        CourseName="Fishin",
                                         CourseId = 2,
-                                        CourseName = "Science",
                                         IsTaking = true,
-                                        IsTeaching = false
+                                        IsTeaching = true
                                     },
                                 new _PersonAttributesCourses
                                     {
+                                        CourseName="Random Course Title",
                                         CourseId = 3,
-                                        CourseName = "English",
                                         IsTeaching = false,
-                                        IsTaking = true
+                                        IsTaking = false
+                                    },
+                            
+                            }
+
+                };
+
+                return vm;
+            }
+            else
+            {
+                var vm = new GetPersonAttributesViewModel
+                {
+                    IsActive = true,
+                    Courses = new List<_PersonAttributesCourses>
+                            {
+                                new _PersonAttributesCourses
+                                    {
+                                        CourseName="Waffle Cooking ",
+                                        CourseId = 1,
+                                        IsTaking = true,
+                                        IsTeaching = true
                                     },
                                 new _PersonAttributesCourses
                                     {
-                                        CourseId = 4,
-                                        CourseName = "PE",
-                                        IsTaking = false,
-                                        IsTeaching = false
-                                    }
+                                        CourseName="How to annoy your wife",
+                                        CourseId = 2,
+                                        IsTaking = true,
+                                        IsTeaching = true
+                                    },
+                                new _PersonAttributesCourses
+                                    {
+                                        CourseName="Other Class",
+                                        CourseId = 3,
+                                        IsTeaching = false,
+                                        IsTaking = false
+                                    },
+                            
                             }
-                    };
 
+                };
 
                 return vm;
             }
         }
+
+   
+        
 
         /// <summary>
         /// this method will return only what the current user is not taking or teaching
@@ -266,32 +296,26 @@ namespace WebApiSvc.Areas.TrainingCatalog.Controllers
                     new GetCourseOptionsViewModel
                         {
                             CourseId = 1,
-                            CourseName = "Math",
-                            CourseNote = "Learn to Add!",
+                            CourseName = "Linux Kernal",
+                            CourseNote = "Any program is only as good as it is useful.",
                             IsActive = true
                         },
                     new GetCourseOptionsViewModel
                         {
                             CourseId = 2,
-                            CourseName = "Science",
-                            CourseNote = "How do things work?",
+                            CourseName = "Objective C",
+                            CourseNote = "Simplicity is not the absence of clutter, that's a consequence of simplicity. Simplicity is somehow essentially describing the purpose and place of an object and product. The absence of clutter is just a clutter-free product. That's not simple.",
                             IsActive = true
 
                         },
                     new GetCourseOptionsViewModel
                         {
                             CourseId = 3,
-                            CourseName = "English",
-                            CourseNote = "Learn to talk american",
+                            CourseName = "Social Networking",
+                            CourseNote = "The biggest risk is not taking any risk... In a world that changing really quickly, the only strategy that is guaranteed to fail is not taking risks.",
                             IsActive = false
-                        },
-                    new GetCourseOptionsViewModel
-                        {
-                            CourseId = 4,
-                            CourseName = "PE",
-                            CourseNote = "Run around a gym",
-                            IsActive = true
                         }
+               
                 };
 
             return vm;

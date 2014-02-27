@@ -16,7 +16,7 @@ using System.Data.Entity;
 namespace WebApiSvc.Areas.TrainingCatalog.Controllers
 {
     [AllowCrossSiteJsonAttribute]
-    [EnableCors(origins: "http://localhost:22562", headers: "*", methods: "*")]
+    [EnableCors(origins: "http://thatcodeguy.net/", headers: "*", methods: "*")]
     public class StudentsController : ApiController
     {
         private DbTrainingContext db;
